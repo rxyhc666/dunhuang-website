@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>敦煌文化</title>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/creation.css" />
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<header>
+			<!-- 头部 -->
+			<div class="heard">
+				<!-- 头部左边 -->
+				<div class="heard_left">
+					<!-- 图片 -->
+					<!-- <div class="logo">
+						<img src="./img/logo.png" alt="">
+					</div> -->
+					<!-- 导航标签 -->
+					<nav>
+						<ul>
+							<li>
+								<a onclick="delayedRedirect('./index.html',2000)">首页</a>
+							</li>
+							<li>
+								<a onclick="delayedRedirect('./DunhuangStudies.html',2000)">敦煌学的产生</a>
+							</li>
+							<li>
+								<a onclick="delayedRedirect('./history.html',2000)">历史简介</a>
+							</li>
+							<li class="rop-down-menu-box">
+								<div class="drop-down-menu">
+									<a href="#" class="dropdown-toggle">壁画专题</a>
+									<div class="drop-box">
+										<a onclick="delayedRedirect('./animal.html', 2000)">动物主题</a>
+										<a onclick="delayedRedirect('./dance.html', 2000)">舞蹈主题</a>
+										<a onclick="delayedRedirect('./architecture.html', 2000)">建筑主题</a>
+										<a onclick="delayedRedirect('./Feitian.html', 2000)">飞天主题</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a onclick="delayedRedirect('./Scripture.html',2000)">藏经洞文献</a>
+							</li>
+							<li>
+								<a onclick="delayedRedirect('./creation.html',2000)"  class="active">共创作品</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- 头部右边 -->
+				<div class="heard_right">
+					<span class="input-container">
+						<input type="text" id="searchInput" placeholder="请输入一个关键字" class="input-focus-trigger">
+					<div class="list">
+						<a href="#">飞天</a>
+						<a href="#">建筑</a>
+						<a href="#">动物</a>
+						<a href="#" >山水画</a>
+						<a href="#">舞蹈</a>
+					</div>
+					</span>
+					<a onclick="delayedRedirect('./login.html',2000)">登录</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<!-- <div class="bg">
+			<div class="bg1" style="background:url('https://ip.e-dunhuang.com/static/home/assets/banner/img/banner1.jpg') no-repeat;"></div>
+			<div class="bg2" style="background:url('https://ip.e-dunhuang.com/static/home/assets/banner/img/banner1.jpg') no-repeat;"></div>
+		</div> -->
+		<!-- 中间内容区域 -->
+		<div id="banner2">
+			<div class="banner2">
+				<h3>共创作品</h3>
+				<p>Co-create works</p>
+			</div>
+		</div>
+		<!-- 第二导航栏 -->
+		<div id="nav2">
+			<div class="nav2_box">
+				<a onclick="delayedRedirect('./index.html',2000)">主页</a> - <a onclick="delayedRedirect('./creation.html',2000)">共创作品</a>
+			</div>
+		</div>
+		<div id="main_box2">
+			<div class="main_box2">
+				<h3>共创作品<span>(Co-create works)</span> </h3>
+				<ul class="Co_create_works_box">
+					<li>
+						<div class="works_box_img"></div>
+						<h3>千年乐舞</h3>
+						<p class="work_box_txt">
+							创作以敦煌莫高窟唐代第220窟北壁壁画为蓝本，以数码手绘方式重绘了壁画中标志性的盛大乐队和燃灯菩萨场景。基于对原壁画的色彩研究，本画面尝试再现壁画千年前的鲜亮色彩，既是对敦煌美术的致敬，也是对数字化重绘壁画的探索。
+						</p>
+					</li>
+					<li>
+						<div class="works_box_img"></div>
+						<h3>九色鹿</h3>
+						<p class="work_box_txt">
+							依据莫高窟第257窟鹿王本生故事画中九色鹿形象创建的三维模型。
+						</p>
+					</li>
+					<li>
+						<div class="works_box_img"></div>
+						<h3>天乐遐想</h3>
+						<p class="work_box_txt">
+							画面灵感源自敦煌莫高窟唐代第220窟壁画中的“不鼓自鸣”图像，取其中代表性的乐器进行重绘，包含羯鼓、花边阮、方响、箜篌、鸡娄鼓、笛等。画面由“不鼓自鸣”所代表的佛国天乐展开想象，结合孔明灯意向，表达“天乐”向人间播撒的美好情景
+						</p>
+					</li>
+					<li>
+						<div class="works_box_img"></div>
+						<h3>敦煌文创</h3>
+						<p class="work_box_txt">
+							“飞天神佛、游行山水、五弦琵琶、敦煌箜篌......”
+							这些带有浓烈敦煌文化色彩的元素一经提及，就引起人们的无限遐想与神往
+							想身披彩带与飞神共舞；想手持琵琶弹奏古曲乐章；想寻找灵鹿与之丛林奔跑......
+						</p>
+					</li>
+					<li>
+						<div class="works_box_img"></div>
+						<h3>弥勒菩萨</h3>
+						<p class="work_box_txt">
+							莫高窟中有许多弥勒菩萨（弥勒佛）的雕像和壁画，他是佛教中的未来佛陀，被广泛崇拜。
+						</p>
+					</li>
+					<li>
+						<div class="works_box_img"></div>
+						<h3>上元灯会</h3>
+						<p class="work_box_txt">
+							创作受敦煌莫高窟唐代第220窟壁画启发，由壁画中的巨型灯楼图像展开对大唐盛景的想象，勾勒了一幕充满烟火气的长安上元灯会街景，探寻敦煌壁画神圣宗教性背后真实的生活百态。
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer>
+			<div id="footer">
+				<img class="footer_left" src="./img/footer_left.png" alt="">
+				<img class="footer_right" src="./img/footer_right.png" alt="">
+				<p>版权所有@敦煌文化 | 联系我们</p>
+			</div>
+		</footer>
+		<button class="scroll-to-top"><img src="./img/up.svg" alt="" /></button>
+		<script>
+			// 搜索框
+			// 1 获取事件源-文本框
+			const input = document.querySelector('.input-focus-trigger')
+			// 2 获取下拉菜单
+			const list = document.querySelector('.list ')
+			// 3 监听事件
+			input.addEventListener('focus',function(){// 当文本框获得焦点时
+				list.style.display = 'block'// 显示下拉菜单
+			})
+			input.addEventListener('blur',function(){// 当文本框失去焦点时
+				list.style.display = 'none'// 隐藏下拉菜单
+			})
+			// 点击图片,图片变大
+			document.addEventListener('DOMContentLoaded', function() {// 当文档内容加载完成后
+				const listItems = document.querySelectorAll('.Co_create_works_box li');
+				listItems.forEach(item => {// 遍历每个'li'元素
+					item.addEventListener('mouseenter', function() {// 当鼠标移入'li'元素时
+						listItems.forEach(li => li.classList.remove('floatinglis'));
+						// 切换当前'li'元素的'floatinglis'类
+						this.classList.toggle('floatinglis');// 添加或移除当前元素的'floatinglis'类
+					});
+				});
+			});
+			// 滚动到顶部按钮
+			// 使用querySelector方法查找具有类名'scroll-to-top'的元素，并将其存储在变量scrollToTop中
+			const scrollToTop = document.querySelector('.scroll-to-top');
+			// 为window对象添加一个滚动事件监听器
+			window.addEventListener('scroll', function() {
+				// 检查当前页面的垂直滚动位置（scrollY）是否大于300像素
+				if (window.scrollY > 300) {
+					// 如果大于300像素，则将滚动到顶部按钮的display样式设置为'block'，使其可见
+					scrollToTop.style.display = 'block';
+				} else {
+					// 否则，将滚动到顶部按钮的display样式设置为'none'，使其隐藏
+					scrollToTop.style.display = 'none';
+				}
+			});
+			// 为滚动到顶部按钮添加一个点击事件监听器
+			scrollToTop.addEventListener('click', function() {
+				// 当按钮被点击时，使用window的scrollTo方法平滑滚动到页面顶部
+				// 参数对象中的top属性设置为0，表示滚动目标位置的垂直坐标是页面顶部
+				// behavior属性设置为'smooth'，表示滚动动画是平滑的
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+			// 延缓链接跳转
+			function delayedRedirect(url, delay) {
+				setTimeout(function() {
+					window.location.href = url;
+				}, delay);
+			}
+		</script>
+	</body>
+</html>

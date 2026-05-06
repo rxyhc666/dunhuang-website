@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>敦煌文化</title>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/login.css" />
+	</head>
+	<body>
+		<div id="form_box">
+			<img class="yunduo" src="./img/yunduo.png" alt="" />
+			<a href="./index.html" class="logo_a">
+				<img src="./img/logo.png" alt="" />
+			</a>
+			<div class="form_list">
+				<ul>
+					<div class="form_title">
+						<span class="title_style" id="loginTitle">
+							登录
+							<div></div>
+						</span>
+						<span id="registerTitle">
+							注册
+							<div></div>
+						</span>
+						<div class="clear"></div>
+					</div>
+					<div class="box1">
+						<li class="list_in">
+							<input type="text" placeholder="请输入账号:" id="accountInput">
+						</li>
+						<li class="list_in">
+							<input type="password" placeholder="请输入密码:" id="passwordInput">
+						</li>
+						<li class="xieyi">
+							<input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" value="agree"> 已阅读并同意 用户协议 和 隐私政策
+						</li>
+						<li class="caozuo">
+							<button id="loginButton">登录</button>
+						</li>
+					</div>
+					<div class="box2" style="display: none;">
+						<li class="list_in">
+							<input type="text" placeholder="昵称:" id="nickname" name="nickname">
+						</li>
+						<li class="list_in">
+							<input type="text" placeholder="请输入账号:" id="account" name="account">
+						</li>
+						<li class="list_in">
+							<input type="password" placeholder="请输入密码:" id="password" name="password">
+						</li>
+						<li class="xieyi">
+							<input type="checkbox" id="agreeCheckbox2" name="agreeCheckbox2" value="agree"> 已阅读并同意 用户协议 和 隐私政策
+						</li>
+						<li class="caozuo">
+							<button id="loginButton1">注册</button>
+						</li>
+					</div>
+				</ul>
+			</div>
+		</div>
+		<script>
+			// 获取登录和注册的span元素
+			const loginSpan = document.getElementById("loginTitle");
+			const registerSpan = document.getElementById("registerTitle");
+			// 获取box1和box2的元素
+			const box1 = document.querySelector(".box1");
+			const box2 = document.querySelector(".box2");
+			// 添加点击事件处理程序
+			loginSpan.addEventListener("click", function () {
+				// 显示box1
+				box1.style.display = "block";
+				// 隐藏box2
+				box2.style.display = "none";
+				// 切换类名
+				loginSpan.classList.add("title_style");
+				registerSpan.classList.remove("title_style");
+			});
+			registerSpan.addEventListener("click", function () {
+				// 显示box2
+				box2.style.display = "block";
+				// 隐藏box1
+				box1.style.display = "none";
+				// 切换类名
+				registerSpan.classList.add("title_style");
+				loginSpan.classList.remove("title_style");
+			});
+			// 点击任意区域,停止动画
+			document.addEventListener("DOMContentLoaded", function() {
+				const formBox = document.getElementById('form_box');
+				formBox.addEventListener('click', function() {
+					// 移除动画属性
+					formBox.style.animation = 'none';
+					// 如果需要之后能够重新添加动画，可以保存原始动画样式
+					formBox.dataset.originalAnimation = formBox.style.animation;
+				});
+				let clickCount = 0;
+				// 如果formBox的data-originalAnimation属性中有值（即存储了原始的动画名称），
+				// 则将该值赋给formBox的style.animation属性，以应用原始的动画效果。
+				formBox.addEventListener('dblclick', function() {
+					if (formBox.dataset.originalAnimation) {
+						formBox.style.animation = formBox.dataset.originalAnimation;
+					}
+					clickCount = 0;  // 重置点击计数器
+				});
+			});
+			// button实现点击登录实现跳转到首页
+			const loginButton = document.getElementById('loginButton')
+			loginButton.addEventListener('click', function() {
+				const accountInput = document.getElementById('accountInput').value.trim();
+				const passwordInput = document.getElementById('passwordInput').value.trim();
+				const agreeCheckbox = document.getElementById('agreeCheckbox').checked;
+				if (accountInput === '' || passwordInput === '' || !agreeCheckbox) {
+					alert('请填写账号、密码，并同意用户协议和隐私政策。');
+				}else{
+					loginButton.style.backgroundColor = '#7e2030'
+					// 延时后跳转至登录页面（模拟服务器处理时间）
+					setTimeout(function() {
+						window.location.href = 'index.html';
+					}, 2000); // 2秒后跳转
+				}
+			});
+			// 注册按钮
+			document.getElementById('loginButton1').addEventListener('click', function() {
+			    // 获取所有输入框的值
+				const nickname = document.getElementById('nickname').value.trim();
+				const account = document.getElementById('account').value.trim();
+				const password = document.getElementById('password').value.trim();
+				const agreeCheckbox = document.getElementById('agreeCheckbox2').checked;
+				// 验证输入
+				if (nickname === ''|| account === '' || password === '' || !agreeCheckbox) {
+					alert('请填写所有信息并同意用户协议和隐私政策。');
+					// return;
+				}else{
+					loginButton1.style.backgroundColor = '#7e2030'
+					alert('注册成功,请登录')
+					// 显示box1
+					box1.style.display = "block";
+					// 隐藏box2
+					box2.style.display = "none";
+					// 切换类名
+					loginSpan.classList.add("title_style");
+					registerSpan.classList.remove("title_style");
+				}
+			})
+		</script>
+	</body>
+</html>

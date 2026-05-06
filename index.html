@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>敦煌文化</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<!-- 导航栏 -->
+	<header>
+		<!-- 头部 -->
+		<div class="heard">
+			<!-- 头部左边 -->
+			<div class="heard_left">
+				<!-- 导航标签 -->
+				<nav>
+					<ul>
+						<li>
+							<a onclick="delayedRedirect('./index.html',2000)" class="active">首页</a>
+						</li>
+						<li>
+							<a onclick="delayedRedirect('./DunhuangStudies.html',2000)">敦煌学的产生</a>
+						</li>
+						<li>
+							<a onclick="delayedRedirect('./history.html',2000)">历史简介</a>
+						</li>
+						<li class="rop-down-menu-box">
+							<div class="drop-down-menu">
+								<a href="#" class="dropdown-toggle">壁画专题</a>
+								<div class="drop-box">
+									<a onclick="delayedRedirect('./animal.html', 2000)">动物主题</a>
+									<a onclick="delayedRedirect('./dance.html', 2000)">舞蹈主题</a>
+									<a onclick="delayedRedirect('./architecture.html', 2000)">建筑主题</a>
+									<a onclick="delayedRedirect('./Feitian.html', 2000)">飞天主题</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a onclick="delayedRedirect('./Scripture.html',2000)">藏经洞文献</a>
+						</li>
+						<li>
+							<a onclick="delayedRedirect('./creation.html',2000)">共创作品</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- 头部右边 -->
+			<div class="heard_right">
+				<span class="input-container">
+					<input type="text" id="searchInput" placeholder="请输入一个关键字" class="input-focus-trigger">
+				<div class="list">
+					<a href="#">飞天</a>
+					<a href="#">建筑</a>
+					<a href="#">动物</a>
+					<a href="#" >山水画</a>
+					<a href="#">舞蹈</a>
+				</div>
+				</span>
+				<a onclick="delayedRedirect('./login.html',2000)">登录</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<!-- 中间区域 -->
+	<div class="z-depth-2">
+		<div class="" style="position: relative;">
+			<div class="tuback">
+				<img src="https://ip.e-dunhuang.com/static/home/assets/banner/img/莫高窟.webp" alt="">
+			</div>
+			<div class="bgzhezhao">
+				<div class="bgzzbox1">
+					<div class="bgzzleft">
+						<div class="boxTitles">
+							<div style="padding-left: 100px; text-align: left">
+								<h3 class="bannerTitle">莫高窟</h3>
+								<p id="p1" class="">
+									莫高窟，位于甘肃省敦煌市，是世界文化遗产。它始建于十六国时期，现存洞窟735个，壁画4.5万多平方米，彩塑2400余尊。莫高窟集建筑、雕塑、壁画于一体，展示了古代丝绸之路的文化交流与艺术瑰宝。
+								</p>
+								<p id="p2" class="hidden">
+									每一幅壁画，每一尊雕塑，都仿佛在诉说着千年的故事，将人们带回到那个辉煌灿烂的时代。它不仅是中国古代艺术的瑰宝，也是全人类共同的宝贵财富，吸引着世界各地的游客和学者前来探访，感受那份跨越时空的艺术魅力。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="bgzzcenter">
+						<div class="cctop"></div>
+						<div class="cctent">
+							<div class="cctopleft"></div>
+							<div class="cctopright"></div>
+						</div>
+					</div>
+					<div class="bgzzright"></div>
+				</div>
+				<div class="bgzzbox2">
+					<div class="tablist">
+						<div class="tabItem" onclick="getaddname('莫高窟')">
+							<div class="tabItem_img">
+								<img class="zt1" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/00.png" data-index="0">
+							</div>
+							<div class="tabItem_title active">莫高窟</div>
+							<span class="tabline"></span>
+						</div>
+						<div class="tabItem" onclick="getaddname('麦积山石窟')">
+							<div class="tabItem_img"><img class="zt2" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/11.png" data-index="1"></div>
+							<div class="tabItem_title ">麦积山石窟</div>
+							<span class=""></span>
+						</div>
+						<div class="tabItem" onclick="getaddname('炳灵寺石窟')">
+							<div class="tabItem_img"><img class="zt2" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/21.png" data-index="2"></div>
+							<div class="tabItem_title">炳灵寺石窟</div>
+							<span class=""></span>
+						</div>
+						<div class="tabItem" onclick="getaddname('榆林窟')">
+							<div class="tabItem_img"><img class="zt2" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/31.png" data-index="3"></div>
+							<div class="tabItem_title">榆林窟</div>
+							<span class=""></span>
+						</div>
+						<div class="tabItem" onclick="getaddname('西千佛洞')">
+							<div class="tabItem_img"><img class="zt2" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/41.png" data-index="4"></div>
+							<div class="tabItem_title">西千佛洞</div>
+							<span class=""></span>
+						</div>
+						<div class="tabItem" onclick="getaddname('北石窟寺')">
+							<div class="tabItem_img"><img class="zt2" src="https://ip.e-dunhuang.com/static/home/assets/banner/img/51.png" data-index="5"></div>
+							<div class="tabItem_title">北石窟寺</div>
+							<span class=""></span>
+						</div>
+						<span class="tablinez"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 中间内容区域 -->
+	<div id="banner">
+		<div class="litte_box">
+			<div class="banner_text">
+				<h1>敦煌文化</h1>
+				<p>
+					敦煌文化，作为中华文明的瑰宝，融合了建筑、雕塑、壁画与佛教文化的精髓，是世界艺术宝库中的璀璨明珠。它坐落于中国甘肃省敦煌市，地处丝绸之路的关键节点，自古以来便是东西方文明交流的重要桥梁。
+					敦煌文化的历史可追溯至秦汉，历经魏晋南北朝、隋唐等朝代的繁荣，形成了丰富多元的文化遗产。其中，莫高窟的壁画与石窟艺术最为著名，它们不仅展现了佛教经典故事，还反映了古代社会生活的真实面貌，线条流畅、色彩绚丽，人物形象栩栩如生。
+					敦煌文化的多元性体现在它不仅是中华文化的瑰宝，还融合了印度、波斯、希腊等外来文化的元素，展现了古代丝绸之路的繁荣与交流。然而，随着岁月的流逝，敦煌文化也面临着自然损害和人为破坏的威胁，保护与传承工作显得尤为重要。
+					近年来，国内外学者和专家致力于敦煌文化的保护与修复，同时通过各种展览、演出等活动，推动其传承与发展。敦煌文化不仅是中华民族的文化自信体现，也是全人类共同的文化遗产，值得我们每个人去珍视、保护和传承。
+				</p>
+				<div class="index_more">
+					<a onclick="delayedRedirect('./DunhuangStudies.html',2000)">了解更多</a>
+				</div>
+			</div>
+			<div class="index_img">
+				<img src="./img/index-img.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 壁画专题 -->
+	<div id="Mural_Special_Topic">
+		<div class="bg2">
+			<img src="./img/bg2.jpg" alt="">
+		</div>
+		<div class="Mural_Special_Topic_box">
+			<div class="h2">
+				<h2>壁画专题</h2>
+				<p>海量壁画，尽情欣赏</p>
+			</div>
+			<ul class="Mural_Special_list">
+				<li>
+					<img src="./img/lu.png" alt="">
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 40px;">
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px goldenrod solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: goldenrod; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px mediumslateblue solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: mediumslateblue; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px teal solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: teal; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px sienna solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: sienna; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+					</div>
+					<div style="font-size: 12px; color: #bf4800;"><span>新款</span></div>
+					<h3><a href="#"  onclick="delayedRedirect('./animal.html', 2000)">动物</a></h3>
+					<p class="Mural_Special_list_txt">
+						敦煌石窟的动物画是以佛教内容为中心。寻访敦煌石窟的动物画的绘画历史，不仅可以饱览古人的表现形式和技法，作为借鉴，还可以清晰体会一种古人创作时的爱心。
+					</p>
+					<p class="Mural_Special_list_number">
+						已收录 <span>100</span> 素材
+					</p>
+				</li>
+				<li>
+					<img src="./img/wudao.png" alt="">
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 40px;">
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px gold solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: gold; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px greenyellow solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: greenyellow; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+					</div>
+					<div style="font-size: 12px; color: #bf4800;"><span>新款</span></div>
+					<h3><a href="#" onclick="delayedRedirect('./dance.html', 2000)">舞蹈</a></h3>
+					<p class="Mural_Special_list_txt">
+						敦煌石窟创造了璀璨夺目，绚丽多姿的的舞蹈形象，如有:在天宫栏墙奏乐，舞蹈的天宫伎乐，在大铺经变中，居于显著地位正在真实地“舞蹈”着的伎乐天，具有浓郁生活气息的舞蹈人形象以及富有那些舞蹈美感的菩萨形象，力士等，这些舞蹈形象可以分为人们意向中神佛世界的天乐舞和人间俗舞两大类。
+					</p>
+					<p class="Mural_Special_list_number">
+						已收录 <span>51</span> 素材
+					</p>
+				</li>
+				<li>
+					<img src="./img/jianzhu.png" alt="">
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 40px;">
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px blueviolet solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: blueviolet; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px lightcoral solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: lightcoral; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+					</div>
+					<div style="font-size: 12px; color: #bf4800;"><span>新款</span></div>
+					<h3><a href="#" onclick="delayedRedirect('./architecture.html', 2000)">建筑</a></h3>
+					<p class="Mural_Special_list_txt">
+						在中国的绘画中，反映建築之美有着悠久的历史。历朝历代都依据其政治制度、生活习俗、审美意识和施工技术，创造了大量木结构建築。敦煌壁画中提供的宫殿、城阙、寺院、宅第等各种建築形象，虽然不是古代建筑实物，却是建筑史的形象资料。
+					</p>
+					<p class="Mural_Special_list_number">
+						已收录 <span>111</span> 素材
+					</p>
+				</li>
+				<li>
+					<img src="./img/feitian.png" alt="">
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 40px;">
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px saddlebrown solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: saddlebrown; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px aquamarine solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: aquamarine; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+						<div style="width: 14px; height: 14px; line-height: 20px; background-color: transparent; border: 1px seagreen solid; position: relative; border-radius: 50%; margin: 0px 5px;">
+							<a href="#">
+								<span style="width: 10px; height: 10px; line-height: 10px; background-color: seagreen; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%;"></span>
+							</a>
+						</div>
+					</div>
+					<div style="font-size: 12px; color: #bf4800;"><span>新款</span></div>
+					<h3><a href="#" onclick="delayedRedirect('./Feitian.html', 2000)">飞天</a></h3>
+					<p class="Mural_Special_list_txt">
+						飞天是佛教造型艺术，它从印度经过西域传到中国内地，经过了一千多年的演变和发展，日渐完美，形成了中国化的造型。由于它的题材，表现方式具有很高的艺术情趣，所以时代相传，为人们所喜爱，以至超出佛教的意义，而成为一种祥瑞的象征。
+					</p>
+					<p class="Mural_Special_list_number">
+						已收录 <span>116</span> 素材
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 文献 -->
+	<div id="Mural_Special_literature">
+		<div class="h2">
+			<h2>藏经洞文献</h2>
+			<p>和千年瑰宝的一次邂逅</p>
+		</div>
+		<div id="literature_box">
+			<div class="literature_box_left">
+				<ul>
+					<li class="liItemSty">
+						<a href="javascript:void(0)" class="active1" data-index="0">文选·运命论</a>
+					</li>
+					<li class="liItemSty">
+						<a href="javascript:void(0)" data-index="1">大般涅槃经卷第一寿命品第一</a>
+					</li>
+					<li class="liItemSty">
+						 <a href="javascript:void(0)" data-index="2">大乘无量寿宗要经</a>
+					</li>
+					<li class="liItemSty">
+						 <a href="javascript:void(0)" data-index="3">归义军衙府酒破历</a>
+					</li>
+					<li class="liItemSty">
+						 <a href="javascript:void(0)" data-index="4">妙法莲华经卷第二譬喻品第三</a>
+					</li>
+					<li class="liItemSty">
+						 <a href="javascript:void(0)" data-index="5">唐景云二年（711年）张君义勋告</a>
+					</li>
+				</ul>
+			</div>
+			<div class="literature_box_right">
+				<img src="./img/minglun.png" alt="">
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- 共创作品 -->
+	<div id="Mural_Special_works">
+		<div class="h2">
+			<h2>共创作品</h2>
+			<p>创作在这里等你</p>
+		</div>
+		<ul class="Co_create_works_box">
+			<li>
+				<div class="works_box_img"></div>
+				<h3>千年乐舞</h3>
+				<p class="work_box_txt">
+					创作以敦煌莫高窟唐代第220窟北壁壁画为蓝本，以数码手绘方式重绘了壁画中标志性的盛大乐队和燃灯菩萨场景。基于对原壁画的色彩研究，本画面尝试再现壁画千年前的鲜亮色彩，既是对敦煌美术的致敬，也是对数字化重绘壁画的探索。
+				</p>
+			</li>
+			<li>
+				<div class="works_box_img"></div>
+				<h3>九色鹿</h3>
+				<p class="work_box_txt">
+					依据莫高窟第257窟鹿王本生故事画中九色鹿形象创建的三维模型。
+				</p>
+			</li>
+			<li>
+				<div class="works_box_img"></div>
+				<h3>天乐遐想</h3>
+				<p class="work_box_txt">
+					画面灵感源自敦煌莫高窟唐代第220窟壁画中的“不鼓自鸣”图像，取其中代表性的乐器进行重绘，包含羯鼓、花边阮、方响、箜篌、鸡娄鼓、笛等。画面由“不鼓自鸣”所代表的佛国天乐展开想象，结合孔明灯意向，表达“天乐”向人间播撒的美好情景
+				</p>
+			</li>
+		</ul>
+	</div>
+	<!-- 壁画元素 -->
+	<div id="Mural_Special_Element">
+		<div class="h2">
+			<h2>壁画元素</h2>
+			<p>高效、便捷</p>
+		</div>
+		<ul class="Mural_Special_Element_box">
+			<li>
+				<div class="Special_Element_img carousel">
+					<img src="img/Element8.png" class="carousel-image active" alt="Image 1-1">
+					<img src="img/Element2.png" class="carousel-image" alt="Image 1-2">
+					<img src="img/Element1.png" class="carousel-image" alt="Image 1-3">
+					<div class="carousel-buttons">
+						<button class="carousel-button prev"><</button>
+						<button class="carousel-button next">></button>
+					</div>
+				</div>
+				<h3>佛传故事之乘象入胎（菩萨服饰）</h3>
+				<p class="Special_Element_txt">
+					菩萨头戴宝冠，璎珞帔巾绕身，上着抹胸覆膊衣，下着彩色百褶长裙。从菩萨的帔巾到衣裙，都应源自贵妇华贵的盛装。
+				</p>
+			</li>
+			<li>
+				<div class="Special_Element_img carousel"> 
+					<img src="img/Element3.png" class="carousel-image active" alt="Image 2-1">
+					<img src="img/Element4.png" class="carousel-image" alt="Image 2-2">
+					<img src="img/Element9.png" class="carousel-image" alt="Image 2-3">
+					<div class="carousel-buttons">
+						<button class="carousel-button prev"><</button>
+						<button class="carousel-button next">></button>
+					</div>
+				</div>
+				<h3>云样透花图案的香炉</h3>
+				<p class="Special_Element_txt">
+					香炉有双层莲花底托，下有四叶形、四脚柱的底座。香炉有盖，其下部呈尖角的扇贝形，沿底圆顶向下弯曲，圆顶有双层云样透花图案。从香炉两侧伸出的莲枝和雅致的莲叶托一小花瓶。花瓶装饰有和香炉顶一样的图案。此图案与西安附近何家村发现的8世纪初的随葬品银香炉很相似。香炉两侧为莲座宝瓶。
+				</p>
+			</li>
+			<li>
+				<div class="Special_Element_img carousel">
+					<img src="img/Element6.png" class="carousel-image active" alt="Image 3-1">
+					<img src="img/Element7.png" class="carousel-image" alt="Image 3-2">
+					<img src="img/Element5.png" class="carousel-image" alt="Image 3-3">
+					<div class="carousel-buttons">
+						<button class="carousel-button prev"><</button>
+						<button class="carousel-button next">></button>
+					</div>
+				</div>
+				<h3>五十一面观音变之酿酒</h3>
+				<p class="Special_Element_txt">
+					画面中央画一灶台，上安一套层叠覆压的方形器皿。科技史学家对此详加考证，认为该器皿应是用于蒸馏的蒸馏器。 灶台边有两名妇女，一人蹲在灶前填薪，手中拿着吹火筒，炉膛内火焰炽烈，灶台顶部的烟囱冒出滚滚浓烟；一人右手端着碗，正在与填薪者交谈，像是品尝过后评说新酒的优劣。地上放着木水桶、酒壶、高足碗、贮酒槽等。
+				</p>
+			</li>
+		</ul>
+	</div>
+	<footer>
+		<div id="footer">
+			<img class="footer_left" src="./img/footer_left.png" alt="">
+			<img class="footer_right" src="./img/footer_right.png" alt="">
+			<p>版权所有@敦煌文化 | 联系我们</p>
+		</div>
+	</footer>
+	<div class="elevator-trigger">
+	    <!-- 这里放你的图标，比如一个罗盘或列表图标 -->
+	    <img src="./img/more1.svg" alt="目录" id="triggerBtn">
+	</div>
+	<!-- 电梯导航 -->
+	<div class="xtx-elevator">
+		<ul class="xtx-elevator-list">
+			<li><a href="javascript:;" data-name="Topic">壁画专题</a></li>
+			<li><a href="javascript:;" data-name="literature">藏经文献</a></li>
+			<li><a href="javascript:;" data-name="works">共创作品</a></li>
+			<li><a href="javascript:;" data-name="Element">壁画元素</a></li>
+			<li><a href="javascript:;" id="backTop"><img src="./img/back.svg" alt="" />顶部</a></li>
+		</ul>
+	</div>
+	<script>
+		// 切换图片，切换点击链接
+		const img4 = [
+			'./img/logo.png',
+			'./img/animal.png',
+			'./img/struction.png',
+			'./img/dance.jpg'
+		]
+		const link = [
+			'./Feitian.html',
+			'./animal.html',
+			'./architecture.html',
+			'./dance.html'
+		]
+		let index = 0; // 当前显示的图片索引
+		const imageElement = document.getElementById('logoImage'); // 获取图片元素
+		const changeInterval = 5000; // 切换图片的时间间隔（毫秒）
+		// 创建一个函数来更改图片
+		function changeImage() {
+			index = (index + 1) % img4.length; // 计算下一张图片的索引
+			imageElement.src = img4[index]; // 更改图片的src属性
+			imageElement.addEventListener('click', function() {
+				const a = document.querySelector('.logo a')
+				a.href = link[index]; // 替换为你想要跳转的链接
+			});
+		}
+		// 使用setInterval来定期调用changeImage函数
+		setInterval(changeImage, changeInterval);
+		// 搜索框
+		// 1 获取事件源-文本框
+		// const input = document.querySelector('.')
+		const input = document.querySelector('.input-focus-trigger')
+		// 2 获取下拉菜单
+		const list = document.querySelector('.list ')
+		// 3 监听事件
+		input.addEventListener('focus',function(){// 当文本框获得焦点时
+			list.style.display = 'block'// 显示下拉菜单
+		})
+		input.addEventListener('blur',function(){// 当文本框失去焦点时
+			list.style.display = 'none'// 隐藏下拉菜单
+		})
+		// 壁画专题
+		document.addEventListener('DOMContentLoaded', function() {// 当文档内容加载完成后
+			const mselis = document.querySelectorAll('.Mural_Special_Element_box li');
+			mselis.forEach(item => {// 遍历每个'li'元素
+				item.addEventListener('mouseenter', function() {// 当鼠标移入'li'元素时
+				// 移除所有'li'元素的'floatinglis'类
+					mselis.forEach(li => li.classList.remove('floatinglis'));
+					// 切换当前'li'元素的'floatinglis'类
+					this.classList.toggle('floatinglis');// 添加或移除当前元素的'floatinglis'类
+				});
+			});
+		});
+		// 共创作品
+		document.addEventListener('DOMContentLoaded', function() {// 当文档内容加载完成后
+			const listItems = document.querySelectorAll('.Co_create_works_box li');
+			listItems.forEach(item => {// 遍历每个'li'元素
+				item.addEventListener('mouseenter', function() {// 当鼠标移入'li'元素时
+					listItems.forEach(li => li.classList.remove('floating'));
+					// 切换当前'li'元素的'floating'类
+					this.classList.toggle('floating');// 添加或移除当前元素的'floating'类
+				});
+			});
+		});
+		// 壁画元素
+		document.addEventListener('DOMContentLoaded', function() {
+			const lis = document.querySelectorAll('.Mural_Special_list li');
+			lis.forEach(item => {
+				item.addEventListener('mouseenter', function() {
+					lis.forEach(li => li.classList.remove('floatinglis'));
+					 // 切换当前'li'元素的'floatinglis'类
+					this.classList.toggle('floatinglis');// 添加或移除当前元素的'floatinglis'类
+				});
+			});
+		});
+		// 轮播图1
+		// 获取第一个li中轮播图图片
+		const images = document.querySelectorAll('.Mural_Special_Element_box li:nth-child(1) .carousel-image');
+		let currentIndex = 0;
+		// 设置定时器来切换图片
+		setInterval(function() {
+		    // 移除当前图片的active类
+		    images[currentIndex].classList.remove('active');
+		    // 计算下一个图片的索引（循环）
+		    currentIndex = (currentIndex + 1) % images.length;
+		    // 为下一个图片添加active类
+		    images[currentIndex].classList.add('active');
+		}, 3000); // 每3秒切换一次图片
+		if (images.length > 0) {
+			// 由于我们在HTML中直接为按钮添加了onclick事件，所以不需要在这里再添加事件监听器
+			// 但为了展示如何通过JavaScript添加事件监听器，以下代码被注释掉：
+			const prevButton = document.querySelector('.prev');
+			const nextButton = document.querySelector('.next');
+			prevButton.addEventListener('click',function(){
+				// 移除当前图片的active类
+				images[currentIndex].classList.remove('active');
+				currentIndex = (currentIndex - 1 + images.length) % images.length;
+				// 为下一个图片添加active类
+				images[currentIndex].classList.add('active');
+			});
+			nextButton.addEventListener('click', function(){
+				// 移除当前图片的active类
+				images[currentIndex].classList.remove('active');
+				// 计算下一个图片的索引（循环）
+				currentIndex = (currentIndex + 1) % images.length;
+				// 为下一个图片添加active类
+				images[currentIndex].classList.add('active');
+			});
+		}
+		// 轮播图2
+		// 获取第二个li中轮播图图片
+		const images2 = document.querySelectorAll('.Mural_Special_Element_box li:nth-child(2) .carousel-image');
+		let currentIndex2 = 0;
+		// 设置定时器来切换图片
+		setInterval(function() {
+		    // 移除当前图片的active类
+		    images2[currentIndex2].classList.remove('active');
+		    // 计算下一个图片的索引（循环）
+		    currentIndex2 = (currentIndex2 + 1) % images2.length;
+		    // 为下一个图片添加active类
+		    images2[currentIndex2].classList.add('active');
+		}, 3000); // 每3秒切换一次图片
+		if (images2.length > 0) {
+			// 由于我们在HTML中直接为按钮添加了onclick事件，所以不需要在这里再添加事件监听器
+			// 但为了展示如何通过JavaScript添加事件监听器，以下代码被注释掉：
+			const prevButton2 = document.querySelector('.Mural_Special_Element_box li:nth-child(2) .prev');
+			const nextButton2 = document.querySelector('.Mural_Special_Element_box li:nth-child(2) .next');
+			prevButton2.addEventListener('click',function(){
+				// 移除当前图片的active类
+				images2[currentIndex2].classList.remove('active');
+				currentIndex2 = (currentIndex2 - 1 + images2.length) % images2.length;
+				// 为下一个图片添加active类
+				images2[currentIndex2].classList.add('active');
+			});
+			nextButton2.addEventListener('click', function(){
+				// 移除当前图片的active类
+				images2[currentIndex2].classList.remove('active');
+				// 计算下一个图片的索引（循环）
+				currentIndex2 = (currentIndex2 + 1) % images2.length;
+				// 为下一个图片添加active类
+				images2[currentIndex2].classList.add('active');
+			});
+		}
+		// 轮播图3
+		// 获取第三个li中轮播图图片
+		const images3 = document.querySelectorAll('.Mural_Special_Element_box li:nth-child(3) .carousel-image');
+		let currentIndex3 = 0;
+		// 设置定时器来切换图片
+		setInterval(function() {
+		    // 移除当前图片的active类
+		    images3[currentIndex3].classList.remove('active');
+		    // 计算下一个图片的索引（循环）
+		    currentIndex3 = (currentIndex3 + 1) % images3.length;
+		    // 为下一个图片添加active类
+		    images3[currentIndex3].classList.add('active');
+		}, 3000); // 每3秒切换一次图片
+		if (images3.length > 0) {
+			// 由于我们在HTML中直接为按钮添加了onclick事件，所以不需要在这里再添加事件监听器
+			// 但为了展示如何通过JavaScript添加事件监听器，以下代码被注释掉：
+			const prevButton3 = document.querySelector('.Mural_Special_Element_box li:nth-child(3) .prev');
+			const nextButton3 = document.querySelector('.Mural_Special_Element_box li:nth-child(3) .next');
+			prevButton3.addEventListener('click',function(){					// 移除当前图片的active类
+				images3[currentIndex3].classList.remove('active');
+				currentIndex3 = (currentIndex3 - 1 + images3.length) % images3.length;
+				// 为下一个图片添加active类
+				images3[currentIndex3].classList.add('active');
+			});
+			nextButton3.addEventListener('click', function(){
+				// 移除当前图片的active类
+				images3[currentIndex3].classList.remove('active');
+				// 计算下一个图片的索引（循环）
+				currentIndex3 = (currentIndex3 + 1) % images3.length;
+				// 为下一个图片添加active类
+				images3[currentIndex3].classList.add('active');
+			});
+		}
+		// 页面滑动大于300,电梯导航出现
+		const triggerBtn = document.getElementById('triggerBtn');
+		const xtxElevator = document.querySelector('.xtx-elevator')
+		const header = document.querySelector('header')
+		window.addEventListener('scroll',function(){
+			const n = document.documentElement.scrollTop
+			if(n>=550){
+				triggerBtn.classList.add('visible');
+				triggerBtn.style.opacity = 1
+				xtxElevator.style.opacity = 1
+			}else{
+				triggerBtn.classList.remove('visible');
+				triggerBtn.style.opacity = 0
+				xtxElevator.style.opacity = 0
+			}
+		})
+		// 添加点击事件
+		triggerBtn.addEventListener('click', function() {
+			this.classList.toggle('move-right');
+		    // 切换 active 类
+		    // 如果有 active 类，则移除（隐藏）；如果没有，则添加（显示）
+		    xtxElevator.classList.toggle('active');
+		});
+		// 可选：点击页面其他地方自动关闭导航（提升体验）
+		document.addEventListener('click', function(e) {
+		    // 如果点击的不是导航内部，也不是触发按钮，则关闭导航
+		    if (!xtxElevator.contains(e.target) && !triggerBtn.contains(e.target)) {
+		        xtxElevator.classList.remove('active');
+				triggerBtn.classList.remove('move-right'); // 图标复位
+		    }
+		});
+		// 返回至顶部
+		const backTop = document.querySelector('#backTop')
+		backTop.addEventListener('click',function(){
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		})
+		// 电梯导航
+		const lists = document.querySelector('.xtx-elevator-list')
+		lists.addEventListener('click',function(e){
+			if(e.target.tagName === 'A'){
+				const box = document.querySelector(`#Mural_Special_${e.target.dataset.name}`)
+				if (box) {
+					window.scrollTo({
+						top: box.offsetTop,
+						behavior: 'smooth'
+					});
+				}
+			}
+		})
+		// 延缓链接跳转
+		function delayedRedirect(url, delay) {
+			setTimeout(function() {
+				window.location.href = url;
+			}, delay);
+		}
+		// 点击给li切换样式
+		// 获取所有链接元素
+		const listItems = document.querySelectorAll('.liItemSty a');
+		const img = document.querySelector('.literature_box_right img');
+		// 定义一个对象来存储每个链接对应的图片路径
+		const imagePaths = [
+			'./img/minglun.png',
+			'https://ip.e-dunhuang.com/static/home/assets/banner/wx/大般涅盘经卷第一寿命品第一.png',
+			'https://ip.e-dunhuang.com/static/home/assets/banner/wx/大乘无量寿宗要经.png',
+			'https://ip.e-dunhuang.com/static/home/assets/banner/wx/归义军衙府酒破历.png',
+			'https://ip.e-dunhuang.com/static/home/assets/banner/wx/妙法莲华经卷第二譬喻品第三.png', 
+			'https://ip.e-dunhuang.com/static/home/assets/banner/wx/唐景云二年（711年）张君义勋告.png'
+		]
+		// 定义一个变量来存储当前具有 active1 类的元素
+		let activeElement = document.querySelector('.liItemSty a');
+		listItems.forEach(function(item) {
+			item.addEventListener('click', function() {
+				// 如果已经有一个元素具有 active1 类，并且它不是当前被点击的元素
+				if (activeElement && activeElement !== this) {
+					// 移除那个元素的 active1 类
+					activeElement.classList.remove('active1');
+				}
+				// 给当前被点击的元素添加 active1 类
+				this.classList.add('active1');
+				const index = event.target.getAttribute('data-index');
+				img.src = imagePaths[index];
+				// 更新变量以指向新的具有 active1 类的元素
+				activeElement = this;
+			});
+		});
+		function getaddname(locationName) {
+			const img1 = [
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/01.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/11.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/21.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/31.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/41.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/51.png'
+			]
+			const img2 = [
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/00.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/10.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/20.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/30.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/40.png',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/50.png'
+			]
+			const img3 = [
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/莫高窟.webp',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/麦积山石窟.webp',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/炳灵寺石窟.webp',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/榆林窟.webp',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/西千佛洞.webp',
+				'https://ip.e-dunhuang.com/static/home/assets/banner/img/北石窟寺.webp'
+			]
+			const font = [
+				'莫高窟','麦积山石窟','炳灵寺石窟','榆林窟','西千佛洞','北石窟寺'
+			]
+			const p3 = [
+				'莫高窟，位于甘肃省敦煌市，是世界文化遗产。它始建于十六国时期，现存洞窟735个，壁画4.5万多平方米，彩塑2400余尊。莫高窟集建筑、雕塑、壁画于一体，展示了古代丝绸之路的文化交流与艺术瑰宝。',
+				'麦积山石窟位于甘肃天水，是麦积山国家5A级旅游景区核心景点，与莫高窟、龙门石窟、云冈石窟并称中国四大石窟。其始建于十六国后秦时期，现存窟龛221个，造像精美，以泥塑艺术闻名，被誉为“东方雕塑陈列馆”。',
+				'炳灵寺石窟位于甘肃省临夏回族自治州永靖县，是世界文化遗产。它开凿于西晋初年，存有窟龛和石雕造像等，展现了中国石窟艺术的发展演变。炳灵寺石窟以其精美的壁画和塑像闻名，是游客探索古代艺术和文化的绝佳之地。',
+				'榆林窟又名万佛峡、榆林寺、上洞子，位于甘肃省酒泉市瓜州县，始建于北魏时期，现存洞窟43个，壁画总面积4200平方米，是莫高窟艺术系统的一个分支，1961年被公布为第一批全国重点文物保护单位。',
+				'西千佛洞位于甘肃省敦煌市党河水库附近，是敦煌石窟艺术的重要组成部分，被称为莫高窟的“姊妹窟”。现存洞窟22个，历经北魏至宋等多个朝代，拥有彩塑34身、壁画800余平方米，是敦煌旅游的热门景点。',
+				'北石窟寺位于甘肃省庆阳市西峰区，始建于北魏永平二年，历经多代增修，现存大小窟龛300余个，石雕造像2000多尊，是甘肃四大石窟之一，也是全国重点文物保护单位，以其精湛的石雕艺术和丰富的历史文化内涵而著名。'
+			]
+			const p4 = [
+				'每一幅壁画，每一尊雕塑，都仿佛在诉说着千年的故事，将人们带回到那个辉煌灿烂的时代。它不仅是中国古代艺术的瑰宝，也是全人类共同的宝贵财富，吸引着世界各地的游客和学者前来探访，感受那份跨越时空的艺术魅力。',
+				'麦积山石窟内的雕塑作品形态各异，栩栩如生，展现了古代匠人的高超技艺和无穷智慧。这些珍贵的艺术品不仅是中国古代文化的瑰宝，也是全人类文明的共同财富，吸引着无数游客前来观赏，感受那份跨越千年的艺术魅力。',
+				'这里，历史与艺术交织，每一凿每一刻都记录着古人的智慧与虔诚。炳灵寺石窟不仅是中国佛教艺术的瑰宝，也是研究古代社会生活、宗教信仰和艺术风格的重要实物资料。它静静地等待着每一位访客，共同聆听那些被岁月铭记的传奇故事。',
+				'榆林窟以其精美的壁画和独特的艺术风格闻名，洞窟内的壁画内容丰富，题材广泛，既有佛教故事，也有社会生活场景，是研究古代社会生活、宗教信仰和艺术发展的重要实物资料。它见证了古代丝绸之路的文化交流与融合，具有极高的历史和艺术价值。',
+				'西千佛洞不仅以其精美的壁画和雕塑吸引着众多游客，还因其独特的历史背景和艺术价值成为了研究敦煌石窟艺术的重要基地。漫步在这些历经千年的洞窟之间，仿佛能够穿越时空，感受古代匠人的智慧与才情。',
+				'这些石雕造像形象生动，神态各异，不仅展示了古代工匠的高超技艺，也反映了佛教文化的深厚底蕴。北石窟寺不仅是研究佛教艺术和古代雕塑艺术的重要实物资料，也是人们了解古代社会生活、宗教信仰和文化交流的重要窗口。'
+			]
+			// console.log(img[1])
+		    // 获取所有的tabItem元素
+		    const tabItems = document.querySelectorAll('.tabItem');
+			const big_img = document.querySelector('.tuback img')
+			const bannerTitle = document.querySelector('.bannerTitle')
+			const p1 = document.querySelector('.boxTitles p')
+			const p2 = document.getElementById('p2')
+		    // 遍历所有的tabItem，移除active类
+		    tabItems.forEach(function(tabItem) {
+		        const title = tabItem.querySelector('.tabItem_title');
+				const img = tabItem.querySelector('.tabItem_img img')
+				const span = tabItem.querySelector('.tabItem span')
+				const dataIndex = img.getAttribute('data-index')
+		        if (title.classList.contains('active')) {
+		            title.classList.remove('active');
+		        }
+				if(img.classList.contains('zt1')){
+					img.classList.remove('zt1')
+					img.src = img1[dataIndex]
+				}
+				if(span.classList.contains('tabline')){
+					span.classList.remove('tabline')
+				}
+				tabItem.addEventListener('click',function(){
+					img.src = img2[dataIndex]
+					title.classList.add('active')
+					img.classList.add('zt1')
+					span.classList.add('tabline')
+					big_img.src = img3[dataIndex]
+					bannerTitle.innerHTML = font[dataIndex]
+					p1.innerHTML = p3[dataIndex]
+					p2.innerHTML = p4[dataIndex]
+				})
+		    });
+		}
+		// 两个p标签切换实现
+		let isP1Visible = true; // 初始状态，p1 是可见的
+		// 设置一个定时器，每隔 3 秒切换一次 p 标签的显示状态
+		let changeFont = function(){
+			// 切换 p1 和 p2 的显示状态
+			document.getElementById('p1').classList.toggle('hidden', !isP1Visible);
+			document.getElementById('p2').classList.toggle('hidden', isP1Visible);
+			isP1Visible = !isP1Visible;
+		}
+		changeFont()
+		setInterval(changeFont, 5000); // 3 秒切换一次
+		
+		let currentTabIndex = 0; // 当前激活的tab索引
+		let tabAutoPlayTimer = null; // 轮播定时器
+		
+		// 封装tab切换的核心逻辑
+		function switchTab(index) {
+		    const tabItems = document.querySelectorAll('.tabItem');
+		    const big_img = document.querySelector('.tuback img');
+		    const bannerTitle = document.querySelector('.bannerTitle');
+		    const p1 = document.querySelector('#p1');
+		    const p2 = document.querySelector('#p2');
+		
+		    // 图片/文本数据（复用原有getaddname里的数据源）
+		    const img1 = [
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/01.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/11.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/21.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/31.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/41.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/51.png'
+		    ];
+		    const img2 = [
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/00.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/10.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/20.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/30.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/40.png',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/50.png'
+		    ];
+		    const img3 = [
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/莫高窟.webp',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/麦积山石窟.webp',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/炳灵寺石窟.webp',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/榆林窟.webp',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/西千佛洞.webp',
+		        'https://ip.e-dunhuang.com/static/home/assets/banner/img/北石窟寺.webp'
+		    ];
+		    const font = [
+		        '莫高窟','麦积山石窟','炳灵寺石窟','榆林窟','西千佛洞','北石窟寺'
+		    ];
+		    const p3 = [
+		        '莫高窟，位于甘肃省敦煌市，是世界文化遗产。它始建于十六国时期，现存洞窟735个，壁画4.5万多平方米，彩塑2400余尊。莫高窟集建筑、雕塑、壁画于一体，展示了古代丝绸之路的文化交流与艺术瑰宝。',
+		        '麦积山石窟位于甘肃天水，是麦积山国家5A级旅游景区核心景点，与莫高窟、龙门石窟、云冈石窟并称中国四大石窟。其始建于十六国后秦时期，现存窟龛221个，造像精美，以泥塑艺术闻名，被誉为“东方雕塑陈列馆”。',
+		        '炳灵寺石窟位于甘肃省临夏回族自治州永靖县，是世界文化遗产。它开凿于西晋初年，存有窟龛和石雕造像等，展现了中国石窟艺术的发展演变。炳灵寺石窟以其精美的壁画和塑像闻名，是游客探索古代艺术和文化的绝佳之地。',
+		        '榆林窟又名万佛峡、榆林寺、上洞子，位于甘肃省酒泉市瓜州县，始建于北魏时期，现存洞窟43个，壁画总面积4200平方米，是莫高窟艺术系统的一个分支，1961年被公布为第一批全国重点文物保护单位。',
+		        '西千佛洞位于甘肃省敦煌市党河水库附近，是敦煌石窟艺术的重要组成部分，被称为莫高窟的“姊妹窟”。现存洞窟22个，历经北魏至宋等多个朝代，拥有彩塑34身、壁画800余平方米，是敦煌旅游的热门景点。',
+		        '北石窟寺位于甘肃省庆阳市西峰区，始建于北魏永平二年，历经多代增修，现存大小窟龛300余个，石雕造像2000多尊，是甘肃四大石窟之一，也是全国重点文物保护单位，以其精湛的石雕艺术和丰富的历史文化内涵而著名。'
+		    ];
+		    const p4 = [
+		        '每一幅壁画，每一尊雕塑，都仿佛在诉说着千年的故事，将人们带回到那个辉煌灿烂的时代。它不仅是中国古代艺术的瑰宝，也是全人类共同的宝贵财富，吸引着世界各地的游客和学者前来探访，感受那份跨越时空的艺术魅力。',
+		        '麦积山石窟内的雕塑作品形态各异，栩栩如生，展现了古代匠人的高超技艺和无穷智慧。这些珍贵的艺术品不仅是中国古代文化的瑰宝，也是全人类文明的共同财富，吸引着无数游客前来观赏，感受那份跨越千年的艺术魅力。',
+		        '这里，历史与艺术交织，每一凿每一刻都记录着古人的智慧与虔诚。炳灵寺石窟不仅是中国佛教艺术的瑰宝，也是研究古代社会生活、宗教信仰和艺术风格的重要实物资料。它静静地等待着每一位访客，共同聆听那些被岁月铭记的传奇故事。',
+		        '榆林窟以其精美的壁画和独特的艺术风格闻名，洞窟内的壁画内容丰富，题材广泛，既有佛教故事，也有社会生活场景，是研究古代社会生活、宗教信仰和艺术发展的重要实物资料。它见证了古代丝绸之路的文化交流与融合，具有极高的历史和艺术价值。',
+		        '西千佛洞不仅以其精美的壁画和雕塑吸引着众多游客，还因其独特的历史背景和艺术价值成为了研究敦煌石窟艺术的重要基地。漫步在这些历经千年的洞窟之间，仿佛能够穿越时空，感受古代匠人的智慧与才情。',
+		        '这些石雕造像形象生动，神态各异，不仅展示了古代工匠的高超技艺，也反映了佛教文化的深厚底蕴。北石窟寺不仅是研究佛教艺术和古代雕塑艺术的重要实物资料，也是人们了解古代社会生活、宗教信仰和文化交流的重要窗口。'
+		    ];
+		
+		    // 重置所有tab样式
+		    tabItems.forEach((tabItem, idx) => {
+		        const title = tabItem.querySelector('.tabItem_title');
+		        const img = tabItem.querySelector('.tabItem_img img');
+		        const span = tabItem.querySelector('span');
+		        
+		        title.classList.remove('active');
+		        img.classList.remove('zt1');
+		        span.classList.remove('tabline');
+		        img.src = img1[idx]; // 重置为未选中状态图片
+		    });
+		
+		    // 激活目标tab
+		    const targetTab = tabItems[index];
+		    const targetImg = targetTab.querySelector('.tabItem_img img');
+		    const targetTitle = targetTab.querySelector('.tabItem_title');
+		    const targetSpan = targetTab.querySelector('span');
+		    
+		    targetImg.src = img2[index]; // 选中状态图片
+		    targetImg.classList.add('zt1');
+		    targetTitle.classList.add('active');
+		    targetSpan.classList.add('tabline');
+		
+		    // 更新banner内容
+		    big_img.src = img3[index];
+		    bannerTitle.innerHTML = font[index];
+		    p1.innerHTML = p3[index];
+		    p2.innerHTML = p4[index];
+		
+		    // 更新当前索引
+		    currentTabIndex = index;
+		}
+		
+		// 重写getaddname函数（保留原有点击逻辑，适配新的切换逻辑）
+		function getaddname(locationName) {
+		    // 找到对应名称的索引
+		    const font = ['莫高窟','麦积山石窟','炳灵寺石窟','榆林窟','西千佛洞','北石窟寺'];
+		    const index = font.indexOf(locationName);
+		    if (index !== -1) {
+		        switchTab(index); // 调用切换逻辑
+		        // 重置定时器（点击后重新开始计时）
+		        clearInterval(tabAutoPlayTimer);
+		        startTabAutoPlay();
+		    }
+		}
+		
+		// 启动自动轮播
+		function startTabAutoPlay() {
+		    tabAutoPlayTimer = setInterval(() => {
+		        // 计算下一个索引（循环）
+		        currentTabIndex = (currentTabIndex + 1) % 6;
+		        switchTab(currentTabIndex);
+		    }, 3000); // 3秒切换一次
+		}
+		document.addEventListener('DOMContentLoaded', function() {
+		    // 初始化第一个tab（莫高窟）
+		    switchTab(0);
+		    // 启动自动轮播
+		    startTabAutoPlay();
+		});
+	</script>
+</body>
+</html>
