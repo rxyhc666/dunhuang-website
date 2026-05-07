@@ -1,0 +1,95 @@
+/* 共创作品 */
+#main_box2 {
+    width: 100%;
+    background-color: #F2EEE8;
+}
+
+#main_box2 h3 {
+    font-size: 30px;
+    padding: 10px 0px;
+}
+
+#main_box2 h3 span {
+    color: #878787;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.main_box2 {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.Co_create_works_box li:nth-child(4) .works_box_img {
+    background: url(../img/create4.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box li:nth-child(5) .works_box_img {
+    background: url(../img/create5.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box li:nth-child(6) .works_box_img {
+    background: url(../img/create6.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* 按钮基础样式 */
+.scroll-to-top {
+    position: fixed;       /* 固定定位，始终在屏幕右下角 */
+    bottom: 30px;          /* 距离底部距离 */
+    right: 30px;           /* 距离右侧距离 */
+    width: 50px;           /* 宽度 */
+    height: 50px;          /* 高度 */
+    border: none;          /* 无边框 */
+    border-radius: 50%;    /* 圆形 */
+    cursor: pointer;       /* 鼠标变成手型 */
+    outline: none;         /* 去除点击轮廓 */
+    z-index: 999;          /* 层级调高，防止被遮挡 */
+    
+    /* 关键：深色背景，让白色图片显现 */
+    background-color: rgba(0, 0, 0, 0.6); 
+    
+    /* 动画过渡 */
+    transition: all 0.3s ease;
+    
+    /* 默认隐藏（通过JS控制显示） */
+    display: none; 
+}
+
+/* 按钮内的图片样式 */
+.scroll-to-top img {
+    width: 24px;           /* 图片宽度，根据需要调整 */
+    height: auto;          /* 高度自适应 */
+    display: block;        /* 转为块级元素 */
+    margin: 13px auto;     /* 垂直居中 (50px高度 - 24px图片高度) / 2 ≈ 13px */
+}
+
+/* 鼠标悬停时的效果 */
+.scroll-to-top:hover {
+    background-color: #ff4500; /* 悬停变为你网站的主题色（敦煌红） */
+    transform: translateY(-3px); /* 微微上浮效果 */
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.4); /* 添加阴影 */
+}
+.learn-more-btn {
+	display: block; /* 让按钮显示为块级元素，以便更好地控制布局 */
+	margin: 20px auto; /* 在上下添加外边距，并水平居中 */
+	padding: 10px 20px; /* 内边距，控制按钮内部文本与边框的距离 */
+	background-color: #FF1124; /* 背景颜色 */
+	color: white; /* 文字颜色 */
+	border: none; /* 去掉边框 */
+	border-radius: 5px; /* 圆角边框 */
+	cursor: pointer; /* 鼠标悬停时显示为手型 */
+	font-size: 16px; /* 字体大小 */
+	text-align: center; /* 文字居中 */
+	text-decoration: none; /* 去掉文字下划线 */
+	transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
+}
+.learn-more-btn:hover {
+	background-color: #7e2030; /* 鼠标悬停时的背景颜色 */
+	color: #9c3925;
+}
